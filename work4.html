@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-image:url('miku.jpg');
+                background-size: cover;
+                width: 100%;
+            }
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgb(147,185,206);
+                color: white;
+                width: 100%;
+            }
+            li {
+                border-right: 1px solid #bbb;
+                display: inline-block;
+                text-align: center;
+            }
+            li:last-child{
+                border-right: none;
+            }
+            li a{
+                display: block;
+                color: white;
+                padding: 14px 30px;
+                text-decoration: none;
+                text-align:center;
+                font-size: 20px;
+            }    
+            li a:hover{
+                background-color: rgb(255, 234, 241);
+                color:cornflowerblue;
+            }
+            li image{
+                width: 10px;
+                height: 10px;
+                margin: auto;
+            }
+            .dropbtn{
+                background-color:  rgb(147,185,206);
+                color: white;
+                padding: 16px;
+                font-size: 20px;
+                border: none;
+                cursor: pointer;
+            }
+            .dropdown{
+                display: inline-block;
+            }
+            .dropdown-content{
+                display: none;
+                position: absolute;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px cornflowerblue;
+                z-index: 1;
+            }
+            .dropdown-content a{
+                color: black;
+                padding: 12px 16px;
+                text-decoration:none;
+                display: block;
+                text-align: center;
+                background-color:  rgb(255, 234, 241);
+            }
+            .dropdown-content a:hover{background-color: rgb(255, 164, 194);}
+            .dropdown:hover .dropdown-content{
+                display: block;
+            }
+            .dropdown:hover .dropbtn{
+                background-color: rgb(255, 234, 241);
+                color: cornflowerblue;
+            }
+            input[type=text]{
+                width:120px;
+                box-sizing: border-box;
+                border: 2px solid #bbb;
+                border-radius: 4px;
+                font-size: 16px;
+                background-color: white;
+                background-image: url('search.png');
+                background-position: contain;
+                background-size: 40px 40px;
+                background-repeat: no-repeat;
+                padding: 12px 500px 12px 40px;
+                transition: width 0.4s ease-in-out;
+                transform: translate(-50%,50%);
+                margin: 10%;
+                margin-left: 50%;
+                margin-bottom: 10px;
+            }    
+            input[type=text]:focus{
+                    width:60%;
+            }
+            .center{
+               padding: 70px 0;
+               border: 3px solid rgb(204, 231, 255);
+               text-align: center;
+            }
+           button[type=submit]{
+               background-color: rgb(204, 231, 255);
+               color: black;
+               margin-left: 50%;
+               margin-top:20px;
+               text-align: center;
+           }
+        </style>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li><img src="sakana.png" title="logo" width="40px"></li>
+                <li><a href="picture.asp">picture</a></li>
+                <li><a href="video.asp">video</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">more</button>
+                        <div class="dropdown-content">
+                           <a href="#">map</a>
+                           <a href="#">news</a>
+                        </div>
+                    </div>  
+                </li>
+            </ul>     
+        </div>  
+        <input type="text" size="40" name="search" class="center">
+        <button type="submit">search</button> 
+    </body>  
+</html>
